@@ -1,6 +1,6 @@
+kfz
 
-
-public class Kfz {
+    public class Kfz {
     private int sitze;
     private int tankInhalt;
     private float verbrauch;
@@ -18,16 +18,16 @@ public class Kfz {
     public float spritVerbrauch(int km) {
         return verbrauch * km / 100;
     }
-}
+    }
 
 
 
 --------------------------------------------------------------------------------------------------------------------------
 
+kfzDemo 
 
-
-public class KfzDemo {
-    public static void main(String[] args) {
+        public class KfzDemo {
+        public static void main(String[] args) {
         KfzV0 minivan = new KfzV0();
         minivan.sitze = 6;
         minivan.tankInhalt = 70;
@@ -36,15 +36,15 @@ public class KfzDemo {
         float reichweite = minivan.reichweite();
         System.out.println("Mögliche Reichweite des Minivans: " + reichweite + " km");
     }
-}
+    }
 
 
 --------------------------------------------------------------------------------------------------------------------------
 
 
+kfzV0
 
-
-public class KfzV0 {
+    public class KfzV0 {
     public int sitze;
     public int tankInhalt;
     public float verbrauch;
@@ -56,7 +56,7 @@ public class KfzV0 {
     public float spritVerbrauch(int km) {
         return verbrauch * km / 100;
     }
-}
+    }
 
 
 
@@ -67,10 +67,10 @@ public class KfzV0 {
 --------------------------------------------------------------------------------------------------------------------------
 
 
+KonstruktorDemo
 
 
-
-public class KonstruktorDemo {
+    public class KonstruktorDemo {
     public static void main(String[] args) {
         Kfz minivan = new Kfz(6, 70, 14);
         Kfz sportwagen = new Kfz(2, 45, 11);
@@ -78,12 +78,12 @@ public class KonstruktorDemo {
         System.out.println("Spritverbrauch Minivan (252 km): " + minivan.spritVerbrauch(252) + " Liter");
         System.out.println("Spritverbrauch Sportwagen (252 km): " + sportwagen.spritVerbrauch(252) + " Liter");
     }
-}
+    }
 
 --------------------------------------------------------------------------------------------------------------------------
+lkw
 
-
-public class Lkw extends Kfz {
+    public class Lkw extends Kfz {
     private int ladeFlaeche;
     private boolean hatAnhaenger;
 
@@ -101,9 +101,9 @@ public class Lkw extends Kfz {
 
 --------------------------------------------------------------------------------------------------------------------------
 
+LkwDemo
 
-
-public class LkwDemo {
+    public class LkwDemo {
     public static void main(String[] args) {
         Kfz sportWagen = new Kfz(2, 45, 11);
         Lkw magirus = new Lkw(2, 45, 11, 30, true);
@@ -111,13 +111,13 @@ public class LkwDemo {
         System.out.println("Verbrauch SportWagen (252 km): " + sportWagen.spritVerbrauch(252) + " Liter");
         System.out.println("Verbrauch Magirus (252 km): " + magirus.spritVerbrauch(252) + " Liter");
     }
-}
+    }
 
 --------------------------------------------------------------------------------------------------------------------------
 
+ReturnDemo
 
-
-public class ReturnDemo {
+    public class ReturnDemo {
     public static void main(String[] args) {
         KfzV0 minivan = new KfzV0();
         minivan.sitze = 6;
@@ -133,13 +133,13 @@ public class ReturnDemo {
 
         System.out.println("Reichweite von Sportwagen: " + sportwagen.reichweite() + " Kilometer");
     }
-}
+    }
 
 --------------------------------------------------------------------------------------------------------------------------
 
+SpritDemo
 
-
-public class SpritDemo {
+    public class SpritDemo {
     public static void main(String[] args) {
         KfzV0 minivan = new KfzV0();
         minivan.sitze = 6;
@@ -157,15 +157,15 @@ public class SpritDemo {
         float verbrauchSportwagen = sportwagen.spritVerbrauch(252);
         System.out.println("Spritverbrauch von Sportwagen für 252 km: " + verbrauchSportwagen + " Liter");
     }
-}    
+    }    
 
 --------------------------------------------------------------------------------------------------------------------------
 
 
+ZweiKfz
 
-
-
-public class ZweiKfz {
+ 
+     public class ZweiKfz {
     public static void main(String[] args) {
         KfzV0 minivan = new KfzV0();
         minivan.sitze = 6;
@@ -180,4 +180,4 @@ public class ZweiKfz {
         System.out.println("Reichweite Minivan: " + minivan.reichweite() + " km");
         System.out.println("Reichweite Sportwagen: " + sportwagen.reichweite() + " km");
     }
-}
+    }
